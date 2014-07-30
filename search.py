@@ -28,18 +28,24 @@ def check_twitter(query):
         cont = True
 
         i = 0
+        average_retweets = 0
+        biggest_no_of_retweets = 0
 
         for tweet in ts.searchTweetsIterable(tso): # this is where the fun actually starts :)
             tweet_time_minute = delorean.parse(ts.getMetadata()['date'])._dt.time().minute
             tweet_time_hour = delorean.parse(ts.getMetadata()['date'])._dt.time().hour
             if (tweet_time_hour + 1 == now_time_hour) and ((now_time_minute - tweet_time_minute) <= 2):
+                average_retweets += tweet['retweet_count']
+                if tweet['retweet_count'] >= biggest_no_of_retweets:
+                    biggest_no_of_retweets = tweet['retweet_count']
                 #print( '@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
                 i +=1
                 #print '.'
             else:
                 break
 
-        return str(i)
+        average_retweets = average_retweets / i
+        return 'the biggest number of retweets was ' + str(biggest_no_of_retweets) + ' and the average number of retweets out of ' + str(i) + ' tweets was ' + str(average_retweets) 
 
 
 
