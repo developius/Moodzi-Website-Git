@@ -52,6 +52,15 @@ def check_twitter(query):
 
     except TwitterSearchException as e: # take care of all those ugly errors if there are some
         print(e)
+
+@app.route('/map')
+def map_page():
+    return render_template('map.html')
+
+@app.route('/joinus')
+def joinus_page():
+    return render_template('joinus.html')
+
 @app.route('/')
 def index_page():
     return render_template('index.html')
