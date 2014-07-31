@@ -15,3 +15,13 @@ body {
 footer {
     margin: 50px 0;
 }
+
+.inline-list-label{
+	width:300px; 
+}
+.joinDiv{
+	width:500px;
+}
+.btnJoin{
+float:right;
+}
