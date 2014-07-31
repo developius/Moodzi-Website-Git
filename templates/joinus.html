@@ -8,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" type="image/png" href="/static/img/favicon.png" />
 
-    <title>Moodzi - Join Us</title>
+    <title>Join Us</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/round-about.css" rel="stylesheet">
+    <link href="/static/css/round-about.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,19 +59,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html"><img src="img/moodzi_grey.svg" height="150" style="margin-top:-55px;"></a>
+                <a class="navbar-brand" href="/#"><img src="/static/img/moodzi_grey.svg" height="150" style="margin-top:-55px;"></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="joinus.html">Join Us</a>
+                        <a href="/joinus">Join Us</a>
                     </li>
                     <li>
-                        <a href="#">Track</a>
+                        <a href="/#">Track</a>
                     </li>
                     <li>
-                        <a href="map.html">Map</a>
+                        <a href="/map">Map</a>
                     </li>
                 </ul>
             </div>
@@ -91,7 +92,8 @@
                 
             </div>
         </div>
-        <div class="joinDiv">
+
+                <div class="joinDiv">
     <ul class="list-unstyled">
        <li ><label class="inline-list-label">Username (not your real name):</label><input id="username_value" type="text"></input></li>
        <li ><label class="inline-list-label">Twitter Account:</label><input id="twitter_account" type="text"></input></li>
@@ -99,6 +101,9 @@
     </ul>
     <button class="btn btn-danger btnJoin" onClick="doSomething();">JOIN!</button>
 </div>
+
+        <div id="output"></div>
+
         <hr>
 
         <!-- Footer -->
@@ -116,10 +121,10 @@
     <!-- /.container -->
 
     <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
+    <script src="/static/js/jquery-1.11.0.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
 
 </body>
 
