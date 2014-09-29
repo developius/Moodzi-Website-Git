@@ -38,14 +38,16 @@ def check_twitter(query):
                 average_retweets += tweet['retweet_count']
                 if tweet['retweet_count'] >= biggest_no_of_retweets:
                     biggest_no_of_retweets = tweet['retweet_count']
-                #print( '@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
+#                print( '@%s tweeted: %s' % ( tweet['user']['screen_name'], tweet['text'] ) )
                 i +=1
-                #print '.'
+#                print '.'
             else:
                 break
-
-        average_retweets = average_retweets / i
-        return 'the biggest number of retweets was ' + str(biggest_no_of_retweets) + ' and the average number of retweets out of ' + str(i) + ' tweets was ' + str(average_retweets) 
+	try:
+	        average_retweets = average_retweets / i
+		return 'The biggest number of retweets was ' + str(biggest_no_of_retweets) + ' and the average number of retweets was ' + str(average_retweets)
+	except ZeroDivisionError:
+		return 'No tweets for specified keyword'
 
 
 
